@@ -51,8 +51,3 @@ def verify_github_user(username_or_url: str) -> bool:
     
     # Step 2: Network check execution
     return _check_api_existence(clean_username)
-
-
-# =====================================================================
-# 4. HOW CLEAN IT IS TO USE NOW
-# =====================================================================
