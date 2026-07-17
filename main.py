@@ -13,9 +13,15 @@ print('''After entering username: You'll get these four things:
       4. Top repositories
       5. AI suggestions ''')
 
+
+def clean_username(username): 
+    if "github.com/" in username:
+        username = username.split("github.com/")[-1].strip("/")
+    return username 
+
 username = input("Enter your github username: ")
-if "github.com/" in username:
-    username = username.split("github.com/")[-1].strip("/")
+username = clean_username(username)
+
 if verify_github_user(username):
     print("Username verified successfully! Fetching Data....")
 
